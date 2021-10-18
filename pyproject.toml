@@ -1,0 +1,8 @@
+[tool.black]
+line-length = 99
+skip-string-normalization = true
+
+[tool.isort]
+include_trailing_comma = true
+line_length = 99
+multi_line_output = 3
