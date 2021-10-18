@@ -1,12 +1,10 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-import dbus
-from dbus.mainloop.glib import DBusGMainLoop
 import re
 import time
 
-from dbus.mainloop.glib import DBusGMainLoop  # NOQA: F811
-import dbus  # NOQA: F811
+import dbus  # NOQA: F801
+from dbus.mainloop.glib import DBusGMainLoop
 
 ccd_regex = re.compile('(.*)?CCD.*')
 temp = 20
