@@ -7,6 +7,9 @@ name = "pypi"
 ipython = "*"
 pytest = "*"
 flake8 = "*"
+pytest-coverage = "*"
+dbus-python = "*"
+ipdb = "*"
 
 [dev-packages]
 
