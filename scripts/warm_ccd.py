@@ -1,13 +1,19 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
+import dbus
+from dbus.mainloop.glib import DBusGMainLoop
 import re
 import time
 
-from dbus.mainloop.glib import DBusGMainLoop
-import dbus
+from dbus.mainloop.glib import DBusGMainLoop  # NOQA: F811
+import dbus  # NOQA: F811
 
 ccd_regex = re.compile('(.*)?CCD.*')
 temp = 20
+
+
+class NoDevicesError(Exception):
+    pass
 
 
 def main():
@@ -30,7 +36,7 @@ def main():
             ccd_devices.append(d)
 
     if not ccd_devices:
-        raise Exception('No CCD device found')
+        raise NoDevicesError('No CCD device found')
 
     for ccd in ccd_devices:
         # Set the CCD temperature to 20° this doesn't warm up the sensor
