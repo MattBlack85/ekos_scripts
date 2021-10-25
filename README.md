@@ -3,7 +3,7 @@
 Gathering some scripts for ekos (kstars) https://apps.kde.org/kstars/
 
 For now the following scripts are provided:
- - scripts/warm_ccd.py =› script that can be run at the end of the scheduler or at the end of acquisition, warms up the CCD sensor slowly
+ - scripts/warm_ccd.py =› script that can be run at the end of the scheduler or at the end of acquisition, warms up the CCD sensor slowly (works only on ZWO and QHY at the moment)
 
 
 # How to install and use the scripts
